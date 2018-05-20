@@ -10,3 +10,4 @@ lGDP <- as.numeric(newProjectData$Lgdp)
 
 model1 <- lm(lGDP ~ sizeOfGovernment + legalSystemPropertyRights + soundMoney + freedomTrade + regulation, data=newProjectData)
 
+summary(model1)
