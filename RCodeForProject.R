@@ -27,4 +27,17 @@ model2 <- lm(lGDP ~ sizeOfGovernment + legalSystemPropertyRights + soundMoney + 
 
 summary(model2)
 
+##Regression Model with Robust Standard Errors 
+
+model3 <- rlm(lGDP ~ sizeOfGovernment + legalSystemPropertyRights + soundMoney + freedomTrade + regulation +unemploymentRates + literacyRates, data=newProjectData)
+summary(model3)
+
+## Do a regression model with just the economic freedom index, literacy rates, and unemployment
+
+## Do subsamples: developing and undeveloped countries or just separate by continents 
+
+##Code for summary statistic table output for Latex 
+stargazer(newProjectData)
+
+
 
