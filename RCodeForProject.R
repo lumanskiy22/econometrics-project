@@ -1,3 +1,7 @@
+library(MASS)
+library(stargazer)
+
+
 projectData <- read_csv("~/Desktop/Econometrics Project/DATA-to-import.csv")
 newProjectData <- projectData[0:159,]
 
