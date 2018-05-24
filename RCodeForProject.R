@@ -1,5 +1,6 @@
 library(MASS)
 library(stargazer)
+library(ggplot2)
 
 
 library(readxl)
@@ -37,8 +38,10 @@ summary(model4)
 ## Do subsamples: developing and undeveloped countries or just separate by continents 
 
 ##Code for summary statistic table output for Latex 
-stargazer(newProjectData)
+stargazer(Final_Data)
 
 #Code for regression tables 
 stargazer(model1, model2, model3, model4)
+
+
 
