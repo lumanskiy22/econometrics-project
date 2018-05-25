@@ -43,5 +43,8 @@ stargazer(Final_Data)
 #Code for regression tables 
 stargazer(model1, model2, model3, model4)
 
+summary(Final_Data)
+stargazer(Final_Data)
+
 
 
