@@ -18,22 +18,22 @@ literacyRates <-as.numeric(newProjectData$lit)
 overallIndex <- as.numeric(newProjectData$summ_ind)
 
 ##Regression Model for log(GDP) and overall index including literacy and unemployment rates
-model1 <- lm(lGDP ~ overallIndex + literacyRates + unemploymentRates, data = newProjectData)
+model1 <- lm(lGDP ~ overallIndex + literacyRates, data = newProjectData)
 
 summary(model1)
 ##Regression Model with all variables including Literacy Rates and Unemployment Rates
 
-model2 <- lm(lGDP ~ sizeOfGovernment + legalSystemPropertyRights + soundMoney + freedomTrade + regulation +unemploymentRates + literacyRates, data=newProjectData)
+model2 <- lm(lGDP ~ sizeOfGovernment + legalSystemPropertyRights + soundMoney + freedomTrade + regulation + literacyRates, data=newProjectData)
 
 summary(model2)
 
 ##Regression Model with Robust Standard Errors 
 
-model3 <- rlm(lGDP ~ sizeOfGovernment + legalSystemPropertyRights + soundMoney + freedomTrade + regulation +unemploymentRates + literacyRates, data=newProjectData)
+model3 <- rlm(lGDP ~ sizeOfGovernment + legalSystemPropertyRights + soundMoney + freedomTrade + regulation + literacyRates, data=newProjectData)
 summary(model3)
 
 ##Regression Model with just size of government and legal system
-model4 <- lm(lGDP ~ sizeOfGovernment + legalSystemPropertyRights + literacyRates + unemploymentRates)
+model4 <- lm(lGDP ~ sizeOfGovernment + legalSystemPropertyRights + literacyRates)
 summary(model4)
 ## Do subsamples: developing and undeveloped countries or just separate by continents 
 
